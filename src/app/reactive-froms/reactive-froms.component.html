@@ -1,0 +1,9 @@
+<form [formGroup]='registerFrom' (ngSubmit)='onSubmit()'>
+  <input type='text' formControlName='firstName' />
+  <div *ngIf='submitted && registerFrom.firstName.errors'>
+    <div *ngIf='registerFrom.firstName.errors.required'>First Name is required</div>
+  </div>
+  <div>
+    <button>Register</button>
+  </div>
+</form>
